@@ -1,11 +1,14 @@
 # PersonBlog
 个人博客
 技术采用：
-  SpringBoot
-  Semantic ui（前端技术可以自己使用BootStrap等其他前段技术渲染页面）
-  Mybatis
-  Thymeleaf
-  Mysql
+  SpringBoot、
+  Semantic ui（前端技术可以自己使用BootStrap等其他前段技术渲染页面）、
+  Mybatis、
+  Thymeleaf、
+  Mysql。
+  
+  
+  
 想法：
   主要是今年大三啦，该准备投简历去实习，突然发现手上没有什么可以拿的出手的东西，然后便想去学习如何去做看起来还行的项目，这便是其中一个。
 
