@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lxn.code.dao.CommentDao">
+    <resultMap id="resultCommentList" type="com.lxn.code.bean.Comment">
+        <id property="id" column="id"></id>
+        <result property="parentId" column="parentId"></result>
+        <result property="nickname" column="nickname"></result>
+        <result property="email" column="email"></result>
+        <result property="content" column="content"></result>
+        <result property="avatar" column="avatar"></result>
+        <result property="createTime" column="createTime"></result>
+        <result property="blog_id" column="blogId"></result>
+        <!--<association property="blog"  javaType="com.lxn.code.bean.Blog">
+            <id property="id" column="id"></id>
+            <result property="title" column="title"></result>
+            <result property="content" column="content"></result>
+            <result property="firstPicture" column="firstPicture"></result>
+            <result property="flag" column="flag"></result>
+            <result property="views" column="views"></result>
+            <result property="appreciation" column="appreciation"></result>
+            <result property="recommend" column="recommend"></result>
+            <result property="createTime" column="createTime"></result>
+            <result property="updateTime" column="updateTime"></result>
+            <result property="type_id" column="typeId"></result>
+            <result property="user_id" column="userId"></result>
+            <result property="tag" column="tag"></result>
+            <result property="published" column="published"></result>
+        </association>-->
+    </resultMap>
+
+    <select id="listCommentByBlogId" resultMap="resultCommentList">
+        select * from comment where blog_id=#{blogId}
+--         and isnull(parentId)
+    </select>
+    <select id="findById" resultMap="resultCommentList">
+        select *from comment,blog where comment.id=#{id}
+    </select>
+    <select id="findByParentId" resultMap="resultCommentList">
+        select * from comment where parentId = #{id}
+    </select>
+    <insert id="saveComment" >
+        insert into comment(parentId,nickname,email,content,avatar,createTime,blog_id)
+        values (#{parentId},#{nickname},#{email},#{content},#{avatar},#{createTime},#{blogId})
+    </insert>
+</mapper>

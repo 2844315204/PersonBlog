@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lxn.code.dao.BlogDao">
+
+    <resultMap id="resultBlogList" type="com.lxn.code.bean.Blog">
+        <id property="id" column="id"></id>
+        <result property="title" column="title"></result>
+        <result property="content" column="content"></result>
+        <result property="firstPicture" column="firstPicture"></result>
+        <result property="flag" column="flag"></result>
+        <result property="views" column="views"></result>
+        <result property="appreciation" column="appreciation"></result>
+        <result property="recommend" column="recommend"></result>
+        <result property="createTime" column="createTime"></result>
+        <result property="updateTime" column="updateTime"></result>
+        <result property="type_id" column="typeId"></result>
+        <result property="user_id" column="userId"></result>
+        <result property="tag" column="tag"></result>
+        <result property="published" column="published"></result>
+        <association property="type"  javaType="com.lxn.code.bean.Type">
+            <id property="id" column="id"></id>
+            <result property="name" column="name"></result>
+        </association>
+        <association property="user"  javaType="com.lxn.code.bean.User">
+            <id property="id" column="id"></id>
+            <result property="nickname" column="nickname"></result>
+            <result property="username" column="username"></result>
+            <result property="password" column="password"></result>
+            <result property="email" column="email"></result>
+            <result property="avatar" column="avatar"></result>
+            <result property="type" column="type"></result>
+            <result property="createTime" column="createTime"></result>
+            <result property="updateTime" column="updateTime"></result>
+        </association>
+    </resultMap>
+
+    <select id="selectAll" resultMap="resultBlogList">
+      select * from blog,type where blog.type_id=type.id
+    </select>
+
+    <delete id="deleteBlog">
+        delete from blog where id=#{id}
+    </delete>
+    <update id="updateBlog">
+        update blog set
+        title=#{title},content=#{content},firstPicture=#{firstPicture},flag=#{flag},
+        views=#{views},appreciation=#{appreciation},shareStatement=#{shareStatement},
+        commentabled=#{commentabled},recommend=#{recommend},
+        updateTime=#{updateTime},type_id=#{typeId},tag=#{tag},published=#{published}
+        where id=#{id}
+    </update>
+
+    <insert id="saveBlog">
+        insert into
+        blog(title,content,firstPicture,flag,views,appreciation,shareStatement,
+        commentabled, published,recommend,createTime,updateTime,type_id,user_id,tag)
+        values(#{title},#{content},#{firstPicture},#{flag},#{views},#{appreciation},#{shareStatement},
+        #{commentabled},#{published},#{recommend},#{createTime},#{updateTime},#{typeId},#{userId},#{tag})
+    </insert>
+
+    <select id="getBlog" resultMap="resultBlogList">
+        select *from blog,type,user where blog.id=#{id} and blog.type_id=type.id and blog.user_id=user.id
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from blog
+    </select>
+    <select id="listcount" resultMap="resultBlogList">
+        select * from blog,type,user where CONCAT(title,content) like concat('%',#{discrib},'%')
+        and blog.type_id=type.id and blog.user_id=user.id
+    </select>
+    <select id="counts" resultType="java.lang.Integer">
+        select count(*) from blog where CONCAT(title,content) like concat('%',#{discrib},'%')
+    </select>
+    <select id="listBlog" resultMap="resultBlogList">
+         select * from blog,type where
+        concat(IFNULL(title,''),IFNULL(type_id,''),IFNULL(recommend,''))
+        like CONCAT ('%${title}%','%${typeId}%','%${recommend}%') and blog.type_id=type.id
+    </select>
+    <select id="listBlogs" resultMap="resultBlogList">
+         select * from blog,type,user where blog.type_id=type.id and blog.user_id=user.id
+    </select>
+
+</mapper>

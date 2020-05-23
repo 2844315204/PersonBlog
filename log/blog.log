@@ -1,0 +1,61 @@
+2020-05-22 11:15:38.321  INFO 8708 --- [main] com.lxn.code.CodeApplicationTests        : Starting CodeApplicationTests on DESKTOP-MOHR2F2 with PID 8708 (started by 28443 in E:\Login\code)
+2020-05-22 11:15:38.340 DEBUG 8708 --- [main] com.lxn.code.CodeApplicationTests        : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-22 11:15:38.459  INFO 8708 --- [main] com.lxn.code.CodeApplicationTests        : No active profile set, falling back to default profiles: default
+2020-05-22 11:15:48.515  INFO 8708 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-22 11:15:48.947  INFO 8708 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-22 11:15:50.294  INFO 8708 --- [main] com.lxn.code.CodeApplicationTests        : Started CodeApplicationTests in 14.352 seconds (JVM running for 27.398)
+2020-05-22 11:15:52.478  INFO 8708 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-22 11:15:53.308 DEBUG 8708 --- [main] c.l.c.d.CommentDao.listCommentByBlogId   : ==>  Preparing: select * from comment where blog_id=? -- and isnull(parentId) 
+2020-05-22 11:15:53.355 DEBUG 8708 --- [main] c.l.c.d.CommentDao.listCommentByBlogId   : ==> Parameters: 21(Long)
+2020-05-22 11:15:53.684 DEBUG 8708 --- [main] c.l.c.d.CommentDao.listCommentByBlogId   : <==      Total: 11
+2020-05-22 11:15:53.840  INFO 8708 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-22 11:15:53.891  INFO 8708 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-05-22 11:44:53.181  INFO 9672 --- [main] com.lxn.code.CodeApplicationTests        : Starting CodeApplicationTests on DESKTOP-MOHR2F2 with PID 9672 (started by 28443 in E:\Login\code)
+2020-05-22 11:44:53.183 DEBUG 9672 --- [main] com.lxn.code.CodeApplicationTests        : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-22 11:44:53.184  INFO 9672 --- [main] com.lxn.code.CodeApplicationTests        : No active profile set, falling back to default profiles: default
+2020-05-22 11:44:58.169  INFO 9672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-22 11:44:58.539  INFO 9672 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-22 11:44:59.363  INFO 9672 --- [main] com.lxn.code.CodeApplicationTests        : Started CodeApplicationTests in 7.011 seconds (JVM running for 9.594)
+2020-05-22 11:44:59.957  INFO 9672 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-22 11:45:00.240 DEBUG 9672 --- [main] c.l.c.d.CommentDao.listCommentByBlogId   : ==>  Preparing: select * from comment where blog_id=? -- and isnull(parentId) 
+2020-05-22 11:45:00.302 DEBUG 9672 --- [main] c.l.c.d.CommentDao.listCommentByBlogId   : ==> Parameters: 21(Long)
+2020-05-22 11:45:00.334 DEBUG 9672 --- [main] c.l.c.d.CommentDao.listCommentByBlogId   : <==      Total: 11
+2020-05-22 11:45:00.363  INFO 9672 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-22 11:45:00.390  INFO 9672 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-05-22 11:50:33.694  INFO 11128 --- [restartedMain] com.lxn.code.CodeApplication             : Starting CodeApplication on DESKTOP-MOHR2F2 with PID 11128 (E:\Login\code\target\classes started by 28443 in E:\Login\code)
+2020-05-22 11:50:33.698 DEBUG 11128 --- [restartedMain] com.lxn.code.CodeApplication             : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-22 11:50:33.699  INFO 11128 --- [restartedMain] com.lxn.code.CodeApplication             : No active profile set, falling back to default profiles: default
+2020-05-22 11:50:33.824  INFO 11128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-22 11:50:33.825  INFO 11128 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-22 11:50:37.527  INFO 11128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-22 11:50:37.554  INFO 11128 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-22 11:50:37.554  INFO 11128 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-22 11:50:37.804  INFO 11128 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-22 11:50:37.806  INFO 11128 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3981 ms
+2020-05-22 11:50:39.536  INFO 11128 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-22 11:50:39.715  INFO 11128 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-22 11:50:40.798  INFO 11128 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-22 11:50:40.896  INFO 11128 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-22 11:50:40.902  INFO 11128 --- [restartedMain] com.lxn.code.CodeApplication             : Started CodeApplication in 8.084 seconds (JVM running for 11.374)
+2020-05-22 11:51:45.484  INFO 11128 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-22 11:51:45.484  INFO 11128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-22 11:51:45.514  INFO 11128 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 29 ms
+2020-05-22 11:51:45.599  INFO 11128 --- [http-nio-8080-exec-2] com.lxn.code.log.LogAspect               : Request:LogAspect.RequestLog(url=http://localhost:8080/admin, ip=0:0:0:0:0:0:0:1, classMethod=com.lxn.code.controller.LoginController.loginPage, args=[])
+2020-05-22 11:51:45.609  INFO 11128 --- [http-nio-8080-exec-2] com.lxn.code.log.LogAspect               : Result:admin/login
+2020-05-22 11:55:02.431  INFO 11128 --- [http-nio-8080-exec-6] com.lxn.code.log.LogAspect               : Request:LogAspect.RequestLog(url=http://localhost:8080/admin/login, ip=0:0:0:0:0:0:0:1, classMethod=com.lxn.code.controller.LoginController.login, args=[lxn, 123, org.apache.catalina.session.StandardSessionFacade@1533090, {}])
+2020-05-22 11:55:02.575  INFO 11128 --- [http-nio-8080-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-05-22 11:55:02.848 DEBUG 11128 --- [http-nio-8080-exec-6] com.lxn.code.dao.UserDao.checkUser       : ==>  Preparing: select *from user where username=? and password=? 
+2020-05-22 11:55:02.902 DEBUG 11128 --- [http-nio-8080-exec-6] com.lxn.code.dao.UserDao.checkUser       : ==> Parameters: lxn(String), 202cb962ac59075b964b07152d234b70(String)
+2020-05-22 11:55:03.087 DEBUG 11128 --- [http-nio-8080-exec-6] com.lxn.code.dao.UserDao.checkUser       : <==      Total: 1
+2020-05-22 11:55:03.092  INFO 11128 --- [http-nio-8080-exec-6] com.lxn.code.log.LogAspect               : Result:admin/index
+2020-05-22 11:55:06.002  INFO 11128 --- [http-nio-8080-exec-10] com.lxn.code.log.LogAspect               : Request:LogAspect.RequestLog(url=http://localhost:8080/admin/blogs, ip=0:0:0:0:0:0:0:1, classMethod=com.lxn.code.controller.BlogController.blogs, args=[{}, 1])
+2020-05-22 11:55:06.030 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.TypeDao.listType        : ==>  Preparing: select * from type 
+2020-05-22 11:55:06.030 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.TypeDao.listType        : ==> Parameters: 
+2020-05-22 11:55:06.125 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.TypeDao.listType        : <==      Total: 4
+2020-05-22 11:55:06.306 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.BlogDao.listBlog_COUNT  : ==>  Preparing: SELECT count(0) FROM blog, type WHERE concat(IFNULL(title, ''), IFNULL(type_id, ''), IFNULL(recommend, '')) LIKE CONCAT('%%', '%%', '%%') AND blog.type_id = type.id 
+2020-05-22 11:55:06.306 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.BlogDao.listBlog_COUNT  : ==> Parameters: 
+2020-05-22 11:55:06.403 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.BlogDao.listBlog_COUNT  : <==      Total: 1
+2020-05-22 11:55:06.410 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.BlogDao.listBlog        : ==>  Preparing: select * from blog,type where concat(IFNULL(title,''),IFNULL(type_id,''),IFNULL(recommend,'')) like CONCAT ('%%','%%','%%') and blog.type_id=type.id LIMIT ? 
+2020-05-22 11:55:06.411 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.BlogDao.listBlog        : ==> Parameters: 3(Integer)
+2020-05-22 11:55:06.423 DEBUG 11128 --- [http-nio-8080-exec-10] com.lxn.code.dao.BlogDao.listBlog        : <==      Total: 3
+2020-05-22 11:55:06.428  INFO 11128 --- [http-nio-8080-exec-10] com.lxn.code.log.LogAspect               : Result:admin/blogs
