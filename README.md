@@ -1,7 +1,11 @@
 # PersonBlog
 个人博客
 技术采用：
-  SpringBoot+Semantic ui（前端技术可以自己使用BootStrap等其他前段技术渲染页面）+pagehelper+Mybatis+Thymeleaf+Mysql
+  SpringBoot
+  Semantic ui（前端技术可以自己使用BootStrap等其他前段技术渲染页面）
+  Mybatis
+  Thymeleaf
+  Mysql
 
 登录页面：
 
